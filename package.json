@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node app/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "karma start test/karma.conf.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/vickymg/GithubApp/issues"
   },
-  "homepage": "https://github.com/vickymg/GithubApp#readme"
+  "homepage": "https://github.com/vickymg/GithubApp#readme",
+  "devDependencies": {
+    "angular-mocks": "^1.5.0"
+  }
 }
