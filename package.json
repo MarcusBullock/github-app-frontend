@@ -1,0 +1,21 @@
+{
+  "name": "githubapp",
+  "version": "1.0.0",
+  "readme": "Readme.md",
+  "description": "github app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vickymg/GithubApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vickymg/GithubApp/issues"
+  },
+  "homepage": "https://github.com/vickymg/GithubApp#readme"
+}
