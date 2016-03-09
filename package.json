@@ -6,7 +6,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node app/index.js",
-    "test": "karma start test/karma.conf.js"
+    "test": "karma start test/karma.conf.js",
+    "protractor": "protractor test/protractor-conf.js",
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update"
   },
   "repository": {
     "type": "git",
@@ -19,6 +22,8 @@
   },
   "homepage": "https://github.com/vickymg/GithubApp#readme",
   "devDependencies": {
-    "angular-mocks": "^1.5.0"
+    "angular-mocks": "^1.5.0",
+    "nodemon": "^1.9.1",
+    "protractor": "^3.1.1"
   }
 }
