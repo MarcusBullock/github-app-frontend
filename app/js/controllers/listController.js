@@ -1,13 +1,23 @@
-githubApp.controller('listController', function() {
+githubApp.controller('listController', function($http) {
   var self = this;
   self.users = [];
-  self.usersJson = JSON.stringify(usersMock);
+  self.usersJson = githubApp.jsonController.items;
 
-  self.unpackJson = function(json) {
-    self.users = JSON.parse(json);
+  self.items = undefined;
+  self.loadData = function () {
+    $http.get('http://localhost:9292/read').success(function(json) {
+      self.items = json;
+    });
   };
 
-  self.unpackJson(self.usersJson);
+  console.log('hello');
+  self.loadData();
+  //
+  // self.unpackJson = function(json) {
+  //   self.users = JSON.parse(json);
+  // };
+  //
+  // self.unpackJson(self.usersJson);
 
 });
 

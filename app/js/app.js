@@ -1,8 +1,10 @@
 var githubApp = angular.module('githubApp', ['ngResource']);
-  app.controller('MyCtrl', function($scope, $http) {
-    $scope.loadData = function () {
-    $http.get('/Users/ScottGledhill/Desktop/Projects/GithubApp').success(function(data) {
-      $scope.items = data;
-    });
-  };
-});
+
+// githubApp.controller('jsonController', function($http) {
+//   this.items = undefined;
+//   this.loadData = function () {
+//   $http.get('http://localhost:9292/read').success(function(json) {
+//     $this.items = json;
+//   });
+// };
+// });
