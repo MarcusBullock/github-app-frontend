@@ -10,10 +10,7 @@
   </head>
 
   <body ng-controller="listController as listCtrl">
-
-        <!--Sidebar content-->
         Search: <input ng-model="query">
-
     <section class="user-class" ng-repeat="user in listCtrl.users | filter:query">
       <img ng-src='{{user.avatar}}' style='height:100px;width:100px;'/>
       <p>Username: {{user.username}}</p>
