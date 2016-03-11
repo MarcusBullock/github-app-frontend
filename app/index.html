@@ -3,23 +3,37 @@
  <head>
    <meta charset="utf-8">
    <title>Github App</title>
+   <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+   <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+   <link rel='stylesheet' type='text/css' href="css/custom-styles.css">
    <script src="bower_components/angular/angular.js"></script>
    <script src="bower_components/angular-resource/angular-resource.js"></script>
    <script src="js/app.js"></script>
-   <script src="js/controllers/listController.js"></script>
+   <script src="js/controllers/controllers.js"></script>
  </head>
 
  <body ng-controller="listController as listCtrl">
 
-       <!--Sidebar content-->
-       Search: <input ng-model="query">
+      <h1 id='title'>Easily find GitHub users!</h1>
 
-   <section class="user-class" ng-repeat="user in listCtrl.users | filter:query">
-     <img ng-src='{{user.avatar}}' style='height:100px;width:100px;'/>
-     <p>Username: {{user.username}}</p>
-     <p>Repo count: {{user.repo_count}}</p>
-     <p>Follower count: {{user.follower_count}}</p>
-   </section>
+      <h4 id='subtitle'>
+        A demonstration of AngularJS by Rufus Raghunath, Scott Gledhill, Vicky Gray, and Marcus Bullock.
+      </h4>
+
+      <section id='searchbar'>
+        Search: <input ng-model="query">
+      </section>
+
+      <section id='update-users'>
+        <span>Can't find someone?</span><button id='update-button' ng-click=''>Update users</button>
+      </section>
+
+     <section class="user-class" ng-repeat="user in listCtrl.users | filter:query">
+       <a ng-href='{{user.url}}'><img ng-src='{{user.avatar}}'/></a>
+       <p><span>Username: </span>{{user.username}}</p>
+       <p><span>Repo count: </span>{{user.repo_count}}</p>
+       <p><span>Follower count: </span>{{user.follower_count}}</p>
+     </section>
+
  </body>
-
 </html>

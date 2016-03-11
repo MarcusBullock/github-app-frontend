@@ -1,0 +1,46 @@
+body {
+  text-align: center;
+  font-family: Arvo, Arial, sans-serif;
+  background-color: #f3ffe6;
+}
+
+#title {
+  font-family: Lobster, Serif;
+  font-size: 3em;
+}
+
+#searchbar {
+  margin-bottom: 1%;
+}
+
+#update-users {
+  margin-bottom: 5%;
+  font-style: italic;
+}
+
+#update-users span{
+  margin-right: 1%;
+}
+
+.user-class {
+  margin-bottom: 3%;
+}
+
+.user-class span {
+  font-weight: bold;
+}
+
+.user-class p {
+  padding: 0;
+  margin: 0;
+}
+
+.user-class img {
+  height: 100px;
+  width:100px;
+  border-radius: 100%;
+}
+
+.user-class img:hover {
+  opacity: 0.6;
+}
