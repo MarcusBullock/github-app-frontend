@@ -6,7 +6,11 @@ body {
 
 #title {
   font-family: Lobster, Serif;
-  font-size: 3em;
+  font-size: 35pt;
+}
+
+#subtitle {
+  font-size: 15pt;
 }
 
 #searchbar {
@@ -20,6 +24,14 @@ body {
 
 #update-users span{
   margin-right: 1%;
+}
+
+#update-success {
+  color: green;
+  font-size: 0.8em;
+  font-style: normal;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .user-class {

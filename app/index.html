@@ -25,7 +25,8 @@
       </section>
 
       <section id='update-users'>
-        <span>Can't find someone?</span><button id='update-button' ng-click=''>Update users</button>
+        <span>Can't find someone?</span><button id='update-button' ng-click='listCtrl.updateUsers()'>Update users</button>
+        <p id='update-success' ng-show="listCtrl.isUpdated">Users updated successfully!</p>
       </section>
 
      <section class="user-class" ng-repeat="user in listCtrl.users | filter:query">
