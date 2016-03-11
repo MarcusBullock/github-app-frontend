@@ -17,7 +17,11 @@
       <h1 id='title'>Easily find GitHub users!</h1>
 
       <h4 id='subtitle'>
-        A demonstration of AngularJS by Rufus Raghunath, Scott Gledhill, Vicky Gray, and Marcus Bullock.
+        A demonstration of AngularJS by
+        <a href='https://github.com/rufusraghunath'>Rufus Raghunath</a>,
+        <a href='https://github.com/ScottGledhill'>Scott Gledhill</a>,
+        <a href='https://github.com/vickymg'>Vicky Gray</a>, and
+        <a href='https://github.com/MarcusBullock'>Marcus Bullock</a>.
       </h4>
 
       <section id='searchbar'>
@@ -26,7 +30,8 @@
 
       <section id='update-users'>
         <span>Can't find someone?</span><button id='update-button' ng-click='listCtrl.updateUsers()'>Update users</button>
-        <p id='update-success' ng-show="listCtrl.isUpdated">Users updated successfully!</p>
+        <p ng-show="listCtrl.beingUpdated">Update in progress. This may take a while...</p>
+        <p ng-show="listCtrl.isUpdated">Users updated successfully!</p>
       </section>
 
      <section class="user-class" ng-repeat="user in listCtrl.users | filter:query">

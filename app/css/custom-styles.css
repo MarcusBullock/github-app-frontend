@@ -13,6 +13,11 @@ body {
   font-size: 15pt;
 }
 
+#subtitle a {
+  text-decoration: none;
+  color: green;
+}
+
 #searchbar {
   margin-bottom: 1%;
 }
@@ -26,7 +31,7 @@ body {
   margin-right: 1%;
 }
 
-#update-success {
+#update-users p {
   color: green;
   font-size: 0.8em;
   font-style: normal;

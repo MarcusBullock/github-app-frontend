@@ -2,6 +2,7 @@ githubApp.controller('listController', function($http) {
   var self = this;
   self.users = [];
   self.isUpdated = false;
+  self.beingUpdated = false;
 
   angular.element(document).ready(function () {
         self.isUpdated = false;
@@ -15,10 +16,12 @@ githubApp.controller('listController', function($http) {
   };
 
   self.updateUsers = function () {
+    self.isUpdated = false;
+    self.beingUpdated = true;
     $http.post('http://localhost:9292/create').success(function(json) {
-      self.isUpdated = true;
       self.users = json;
-      angular.element(document.querySelector('#update-success')).show();
+      self.beingUpdated = false;
+      self.isUpdated = true;
     });
   };
 
