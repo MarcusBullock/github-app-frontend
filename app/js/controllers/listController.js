@@ -1,23 +1,15 @@
 githubApp.controller('listController', function($http) {
   var self = this;
   self.users = [];
-  self.usersJson = githubApp.jsonController.items;
+  self.usersJson = undefined;
 
-  self.items = undefined;
   self.loadData = function () {
     $http.get('http://localhost:9292/read').success(function(json) {
-      self.items = json;
+      self.users = json;
     });
   };
 
-  console.log('hello');
   self.loadData();
-  //
-  // self.unpackJson = function(json) {
-  //   self.users = JSON.parse(json);
-  // };
-  //
-  // self.unpackJson(self.usersJson);
 
 });
 
